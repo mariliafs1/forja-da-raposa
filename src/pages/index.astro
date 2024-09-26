@@ -1,23 +1,26 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Navbar from '../components/Navbar/Navbar.astro';
-import Banner from '../components/Banner.astro';
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar/Navbar.astro";
+import Banner from "../components/Banner.astro";
+import Card1 from "../components/Card1.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-	<Navbar />
-	<Banner />
+<Layout title="Forja da Raposa">
+  <Navbar />
+  <Banner />
+  <div class="flex flex-col md:flex-row justify-center items-center md:mx-20 lg:mx-60">
+	<Card1 alinhamento="direita">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</Card1>
+	<Card1 alinhamento="esquerda">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</Card1>
+  </div>
+
+  
+
 </Layout>
 
 <style>
-body{
-	max-width: 1500px ;
-	height: 100vh;
-	text-align: center;
-	margin: 0 auto;
-	overflow: hidden;
-}
-
-
-
+  body {
+    max-width: 1500px;
+    text-align: center;
+    margin: 0 auto;
+  }
 </style>

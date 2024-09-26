@@ -1,0 +1,26 @@
+---
+const { text, alinhamento } = Astro.props;
+
+let justifica = "";
+let lado = "";
+
+if (alinhamento == "direita") {
+  justifica = "justify-start";
+  lado = "r";
+} else if (alinhamento == "esquerda") {
+  justifica = "justify-end ";
+  lado = "l";
+}
+---
+
+<section class=`flex m${lado}-8 ${justifica} `>
+  <div
+    class=`bg-white my-7 py-6 px-6 rounded-${lado}-full border-y-2 border-${lado}-2 border-orangeFox shadow-lg shadow-orangeFox/30 md:rounded-full md:border-2 `
+  >
+    <slot />
+  </div>
+</section>
+
+<!-- <section class="flex justify-end ml-8">
+    <div class=" bg-white  my-7 py-6 px-6 rounded-l-full border-y-2 border-l-2 border-orangeFox shadow-lg">{text}</div>
+</section> -->
