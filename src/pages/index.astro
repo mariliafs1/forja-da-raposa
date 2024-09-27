@@ -3,17 +3,26 @@ import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar/Navbar.astro";
 import Banner from "../components/Banner.astro";
 import Card1 from "../components/Card1.astro";
+import PhotosSwiper from "../components/swiper/Swiper.jsx";
 ---
 
 <Layout title="Forja da Raposa">
-  <Navbar />
-  <Banner />
-  <div class="flex flex-col md:flex-row justify-center items-center md:mx-20 lg:mx-60">
-    <Card1 alinhamento="direita">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</Card1>
-    <Card1 alinhamento="esquerda">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</Card1>
-  </div>
-
   
+    <Navbar slot="intro"/>
+    <Banner slot="intro" />
+    <div class="flex flex-col justify-center items-center md:flex-row  md:mx-20 lg:mx-60" slot="intro">
+      <Card1 alinhamento="direita" color="1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</Card1>
+      <Card1 alinhamento="esquerda">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</Card1>
+    </div>
+    <div class="flex justify-between items-center bg-orange-bright relative">
+      <hr class="border-t-4 border-orange-orangeFox w-[100%] mr-3" />
+      <img src="foxgrin.svg" alt="" class="h-20 z-10">
+      <hr class="border-t-4 border-orange-orangeFox w-[100%] ml-3" />
+      <div class="absolute inset-y-0 left-0 w-full bg-white h-1/2"></div>
+    </div>
+    <div class="bg-orange-bright w-full h-full">
+      <PhotosSwiper client:load />
+    </div>
 
 </Layout>
 

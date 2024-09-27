@@ -15,7 +15,12 @@ export default {
 					medium:'#90D26D',
 					dark:'#102E26'
 				},
-				orangeFox: '#EF790B'
+				orange:{
+					bright:'#FFE2C7',
+					medium:'#F6C393',
+					orangeFox: '#EF790B',
+					dark:'#894506',
+				}
 			},
 			fontFamily:{
 				logo1: ["Rowdies"],
